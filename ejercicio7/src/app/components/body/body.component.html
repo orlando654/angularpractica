@@ -1,0 +1,17 @@
+<div [ngSwitch]="tienda">
+
+    <div class="btn">
+        <button (click)="redireccionar('frutas')"class="boton" >Tienda Frutas</button>
+        <button (click)="redireccionar('verduras')" class="boton" >Tienda Verduras</button>
+        <button (click)="redireccionar('ropa')" class="boton" >Tienda Ropa</button>
+    </div>
+
+   <div class="resultado">
+    <p *ngSwitchCase=" 'frutas' "> La tienda de frutas abierta</p>
+    <p *ngSwitchCase="'verduras'">La tienda de verduras abierta</p>
+    <p *ngSwitchCase="'ropa'">La tienda de ropas abierta</p>
+    <p *ngSwitchDefault>Elige una tienda </p>
+
+   </div>
+
+</div>

@@ -1,0 +1,49 @@
+<br>
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Opcion 1</label>
+
+    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="selectedCountry.id"
+      (change)="onSelect($any($event.target).value)">
+      <option *ngFor="let country of countries" value={{country.id}}>
+        {{country.name}}
+      </option>
+    </select>
+
+
+
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Opcion 2</label>
+    <select class="form-control" id="exampleFormControlSelect2" (change)="nivel3($any($event.target).value)">
+      <option *ngFor="let city of cities" value={{city.id}}>
+        {{city.name}}
+      </option>
+    </select>
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Opcion 3</label>
+    <select class="form-control" id="exampleFormControlSelect2">
+      <option *ngFor="let tipo3 of tipes3" value={{tipo3.id}}>
+        {{ tipo3.name }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"> textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+  <div class="from-group mt-5">
+    <button type="submit" class="btn btn-primary btn-lg btn-block">
+      Guardar
+    </button>
+
+  </div>
+
+</form>

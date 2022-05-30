@@ -1,0 +1,70 @@
+<div class="container">
+    <form (ngSubmit)="guardar()" #forma="ngForm">
+  
+      <div class="row">
+        <div class="col-5">
+          <label for="fname" class="lbl">Nombre</label>
+        </div>
+        <div>
+          <input 
+          type="text" 
+          id="fname" 
+          placeholder="Nombre" 
+          class="txtbox"
+          name="nombre"
+          [(ngModel)]="persona.nombre"
+
+          required
+          minlength="3"
+          #nombre="ngModel"
+          [class.is-invalid]="nombre.invalid && nombre.touched"
+          pattern="^[a-zA-zñÑ\s]+$"
+          
+          
+          >
+          <small class="text-danger" *ngIf="nombre.invalid && nombre.touched">
+        Ingrese mas de 3 letras
+      </small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <label for="fdireccion" class="lbl">direccion</label>
+        </div>
+        <div>
+          <input 
+          type="text"
+           id="fdireccion" 
+           placeholder="direccion" 
+           class="txtbox"
+           name="direccion"
+           [(ngModel)]="persona.direccion"
+           required
+           minlength="3"
+           #direccion = "ngModel"
+           [class.is-invalid]="direccion.invalid && direccion.touched"
+           pattern="^[0-9a-zA-ZñÑ\s]+$"
+
+           >
+
+           <small class="text-danger" *ngIf="direccion.invalid && direccion.touched">
+            Ingrese mas de 3 letras
+          </small>
+        </div>
+      </div>
+      <div>
+          <input type="checkbox" id="terminos" name="aceptar" value="terminos" ngModel
+          required>
+          <label for="terminos">Acepta terminos y condiciones</label>
+      </div>
+
+      <div class="row">
+        <div class="alinea-btn">
+          <button type="submit" class="btn" [disabled]="!forma.valid">Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+      
+  

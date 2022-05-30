@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background: url(https://i.pinimg.com/originals/2e/ae/a0/2eaea0dac28011222ea9ab70d7fb163a.gif);
+}
+
+.btn{
+  color: black;
+  background-color: chartreuse;
+  font-size: 30px;
+  margin: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.btn:hover{
+  background-color: black;
+  color: chartreuse;
+}
+

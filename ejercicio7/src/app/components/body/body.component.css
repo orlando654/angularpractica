@@ -1,0 +1,22 @@
+.btn{
+    margin: 16px;
+    
+}
+
+.boton{
+    background: linear-gradient(to bottom, blue, white);
+    padding: 11px 10px;
+    border-radius: 15%;
+    margin: 5px;
+    cursor: pointer;
+
+
+}
+
+.resultado{
+    padding: 20px;
+    margin: 16px;
+    background: linear-gradient(red, blue);
+    float: left;
+    border-radius: 15%;
+}

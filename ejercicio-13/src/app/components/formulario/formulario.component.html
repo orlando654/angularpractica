@@ -1,0 +1,62 @@
+<!-- <div class="row">
+  <div class="col-5">
+    <label class="lbl">Correo Electonico: </label>
+  </div>
+
+
+</div> -->
+
+<!-- <div class="row">
+  <input type="text" 
+  id="correo" 
+  placeholder="Correo Electronico" 
+  class="txtbox" 
+  name="correo" 
+  ngModel 
+
+  required
+  pattern="^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$"
+  >
+
+  <small class="text-danger" >
+    Ingrese un Correo valido
+  </small>
+</div> -->
+
+
+<div>
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="">
+      <div class="col-5 row1">
+        <label for="fcorreo" class="lbl">Correo Electronico:</label>
+      </div>
+
+      <div class="row2">
+        <input type="text" 
+        id="fcorreo" 
+        placeholder="Correo Electronico" 
+        class="row" 
+        name="correo" 
+        ngModel
+        [(ngModel)]="email.correo" 
+        required #correo="ngModel" 
+        [class.is-invalid]="correo.invalid && correo.touched"
+        pattern="^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$"
+        >
+
+        <small class="text-danger" *ngIf="correo.invalid && correo.touched">Ingrese un Correo valido</small>
+      </div>
+
+    </div>
+
+
+    <div class="row3">
+      <div class="alinea-btn">
+        <button type="submit" class="btn" [disabled]="forma.invalid"> Verificar </button>
+      </div>
+    </div>
+
+
+  </form>
+</div>

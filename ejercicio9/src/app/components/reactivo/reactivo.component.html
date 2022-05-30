@@ -1,0 +1,141 @@
+<h4>Formularios <small>Reactivo</small></h4>
+<hr>
+
+<div class="container">
+  <form [formGroup]="forma"(ngSubmit)="guardar()">
+
+    <div class="row">
+      <div class="col-5">
+        <label for="fname" class="lbl">Nombre</label>
+      </div>
+      <div>
+        <input
+          type="text"
+          id="fname"
+          placeholder="Nombre"
+          class="txtbox"
+          formControlName="nombre"
+          [class.is-invalid]="nombreNoValido"
+          >
+          <small class="text-danger" *ngIf="nombreNoValido">
+            Ingrese mas de 3 letras
+          </small>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+          <label for="flastName" class="lbl">Apellido</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="flastName"
+            placeholder="Apellido"
+            class="txtbox"
+            formControlName="apellido"
+            [class.is-invalid]="apellidoNoValido"
+
+            >
+            <small class="text-danger" *ngIf="apellidoNoValido">
+                Ingrese mas de 3 letras
+              </small>
+        </div>
+      </div>
+     <div class="row">
+        <div class="col-5">
+          <label for="femail" class="lbl">Email</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="femail"
+            placeholder="Correo Electronico"
+            class="txtbox"
+            formControlName="correo"
+            [class.is-invalid]="correoNoValido"
+
+            >
+            <small class="text-danger" *ngIf="correoNoValido">
+                Ingrese un email valido
+              </small>
+        </div>
+      </div>
+
+      <div class="row" formGroupName="direccion">
+        <div class="col-5">
+          <label class="lbl">Direccion</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Distrito"
+            class="txtbox-2 mueve-derecha"
+            formControlName="distrito"
+            [class.is-invalid]="distritoNoValido"
+            >
+        </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Ciudad"
+              class="txtbox-2"
+              formControlName="ciudad"
+              [class.is-invalid]="ciudadNoValido"
+              >
+          </div>
+      </div>
+
+      <div>
+        <small class="text-danger mueve-derecha" *ngIf="distritoNoValido">
+          El Distrito es obligatorio
+        </small>
+        <small class="text-danger" *ngIf="ciudadNoValido">
+          La Ciudad es obligatorio
+        </small>
+      </div>
+
+      <div class="tamano-tabla row">
+
+        <table>
+          <thead class="color-cabecera">
+            <tr>
+              <th>ID</th>
+              <th>Pasa Tiempo</th>
+              <th>Borrar</th>
+            </tr>
+          </thead>
+
+          <tbody formArrayName="pasatiempos
+          ">
+            <tr *ngFor="let s of pasatiempos2.controls; let i = index ">   
+              <td>{{ i + 1 }}</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+  
+
+
+
+      <div class="row">
+        <div class="alinea-btn">
+          <button type="submit" class="btn" [disabled]="forma.invalid">Guardar</button>
+          <hr>
+        <pre>
+        Estado del formulario: {{ forma.valid }}
+        <br>
+        Status: {{ forma.status }}
+        </pre>
+
+        <pre>
+  {{ forma.value | json }}
+        </pre>
+        {{forma.value| json}}
+        </div>
+      </div>
+    </form>
+  </div>
+  

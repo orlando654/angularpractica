@@ -1,0 +1,19 @@
+.sidebar{
+    
+    background-color: aqua;
+    overflow: hidden;
+    float: left;
+}
+
+.sidebar a{
+    display: block;
+    
+    color: white;
+    padding: 16px 17px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.sidebar a:hover {
+    background-color: tomato;
+}

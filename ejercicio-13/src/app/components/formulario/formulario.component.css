@@ -1,0 +1,24 @@
+.row1{
+  float: left;
+  position: relative;
+  color: rgb(27, 8, 110);
+}
+.row2{
+  float: left;
+  position: relative;
+}
+.row3{
+  float: left;
+  position: relative; 
+  cursor: pointer;
+  color:grey
+}
+
+.row3:hover{
+  background-color: antiquewhite;
+
+}
+
+.text-danger{
+  color: red;
+}

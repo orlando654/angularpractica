@@ -1,0 +1,157 @@
+<h4>Formularios <small>Template</small></h4>
+<hr>
+
+<div class="container">
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="row">
+      <div class="col-5">
+        <label for="fname" class="lbl">Nombre</label>
+      </div>
+      
+      <div>
+        <input 
+        type="text" 
+        id="fname" 
+        placeholder="Nombre" 
+        class="txtbox"
+        name="nombre"
+        [(ngModel)]="persona.nombre"
+        required
+        minlength="4"
+        #nombre="ngModel"
+        [class.is-invalid]="nombre.invalid && nombre.touched"
+        pattern="^[a-zA-zZñÑ\s]+$"
+
+
+
+        >
+        <small class="text-danger" *ngIf=" nombre.invalid && nombre.touched">Ingrese mas de 4 letras</small>
+      </div>
+    </div>
+<!--  en el ngmodel  tiene que estar con Corchetes y parenticis para enviar y recibir informacion -->
+
+    <div class="row">
+        <div class="col-5">
+          <label for="flastName" class="lbl">Apellido</label>
+        </div>
+        <div>
+          <input 
+          type="text" 
+          id="flastName" 
+          placeholder="Apellido" 
+          class="txtbox"
+          name ="apeliido"
+          [(ngModel)]="persona.apellido"
+          required
+          minlength="4"
+          #apellido="ngModel"
+          [class.is-invalid]="apellido.invalid && apellido.touched"
+          pattern="^[a-zA-zZñÑ\s]+$"
+  
+
+      
+          >
+          <small class="text-danger" *ngIf="apellido.invalid && nombre.touched">Ingrese un email valido</small>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-5">
+          <label for="femail" class="lbl">Email</label>
+        </div>
+        <div>
+          <input 
+          type="text" 
+          id="femail" 
+          placeholder="Correo Electronico" 
+          class="txtbox" 
+          name="correo" 
+          ngModel
+          [(ngModel)]="persona.correo"
+          required
+          #correo="ngModel"
+          [class.is-invalid]="correo.invalid && correo.touched"
+          pattern="^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$"
+
+          
+          
+          >
+          <small class="text-danger" *ngIf="correo.invalid && nombre.touched">Ingrese un email valido</small>
+        </div>
+      </div>
+
+
+<div class="row">
+  <div class="col-5">
+    <label for="fpais" class="lbl" >pais</label>
+  </div>
+  <div>
+    <select
+      name="pais"
+      id="fpais"
+      class="cmbbox"
+      ngModel
+      required
+      [disabled]="paises.length === 0"
+      [(ngModel)]="persona.pais"
+      #pais="ngModel"
+      [class.is-invalid]="pais.invalid && pais.touched"
+      >
+      <option *ngFor="let pais of paises" [value]="pais.codigo">
+        {{ pais.nombre }}
+      </option>
+    </select>
+    <small class="text-danger" *ngIf="pais.invalid && pais.touched">
+      Ingrese un pais
+    </small>
+</div>
+
+</div>
+      
+<div class="row">
+  <div class="col-5">
+    <label class="lbl">Genero</label>
+  </div>
+  <div class="una-linea radiobtn">
+      <input
+      type="radio"
+      id="fgenero-masculino"
+      name="genero"
+      ngModel
+      value="M"
+      required
+      #genero="ngModel"
+      [(ngModel)]="persona.genero"
+      >
+      <label for="fgenero-masculino">Masculino</label>
+  </div>
+  <div class="una-linea radiobtn">
+    <input
+    type="radio"
+    id="fgenero-femenino"
+    name="genero"
+    ngModel
+    value="F"
+    required
+    #genero="ngModel"
+    [(ngModel)]="persona.genero"
+    >
+    <label for="fgenero-femenino">Femenino</label>
+</div>
+</div>
+
+      
+  
+      <div class="row">
+        <div class="alinea-btn">
+            <!--para negar -->
+          <button type="submit" class="btn" [disabled]="!forma.valid">Guardar</button>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+  
+
+<hr>

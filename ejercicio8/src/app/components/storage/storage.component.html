@@ -1,0 +1,19 @@
+<h1>Contador</h1>
+<div class="numeros">
+    <p class="numero">
+        {{valor}}
+
+    </p>
+</div>
+
+<div >
+    
+    <button class="btn" (click)="add()">+</button>
+    <button class="btn1" (click)="substract()">-</button>
+</div>
+
+<div>
+    <p *ngIf="advertencia ===true">
+        El valor no puede  ser negativo; tampoco mayor a 50
+    </p>
+</div>

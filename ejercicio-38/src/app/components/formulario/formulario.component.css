@@ -1,0 +1,54 @@
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f27c;
+    padding: 20px;
+  }
+  
+  .row {
+    padding-top: 10px;
+  }
+  
+  .col-5 {
+    float: left;
+    width: 5%;
+    margin-top: 6px;
+  }
+  
+  .lbl {
+    text-align: right;
+    display: block;
+    padding: 0.5em 1.5em 0.5em 0;
+  }
+  
+  .txtbox {
+    width: 25%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .alinea-btn{
+    margin-left: 5%;
+  }
+  
+  .btn {
+    width: 28%;
+    padding: 12px;
+    cursor: pointer;
+  }
+  .text-danger {
+    display: block;
+    margin-left: 5%;
+    padding-top: 2px;
+    color: #ff0000a6;
+  }
+  
+  
+  /*Validaciones*/
+
+.is-invalid {
+    border: 1px solid #ff0000a6;
+  }
+  
+  
+  

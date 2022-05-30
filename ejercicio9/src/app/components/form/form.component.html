@@ -1,0 +1,13 @@
+<select [(ngModel)]="selectedCountry.id" (change)="onSelect($any($event.target).value)">
+    <option *ngFor="let country of countries" value="{{country.id}}">
+        {{country.name}} 
+    </option>
+</select>
+
+<br>
+
+<select >
+    <option *ngFor="let city of cities" value="{{city.id}}">
+        {{city.name}}
+    </option>
+</select>

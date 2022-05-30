@@ -1,0 +1,39 @@
+h1{
+    background-color: aqua;
+    padding: 15px 14px;
+    margin: 10px;
+    border-radius: 15%;
+    box-shadow: 3px;
+    float: left;
+    
+}
+
+.numeros{
+    float: left;
+    padding: 20px 35px;
+    border: 2px solid;
+    margin-right:30px ;
+    margin-left: 30%;
+    margin-bottom: 100%;
+    position: relative;
+}
+
+.btn{
+    padding: 15px;
+    border-radius: 10%  ;
+    margin-right: 100%;
+    color: white;
+    background-color: green;
+  
+    display: block;
+    position: relative;
+    
+}
+
+.btn1{
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 10% ;
+    margin-top: 15px;       
+}

@@ -1,0 +1,23 @@
+<div>
+
+    <div class="izquierda">
+      <div>
+        <h1>holaMundo</h1>
+        <hr>
+    
+        <div *ngIf="mostrar" class="card">
+          <div class="container">
+            <h4>
+              <b>{{frase.autor}}</b>
+            </h4>
+            <p>{{frase.mensaje}}</p>
+          </div>
+        </div>
+  
+        <div class="btn">
+          <button class="boton" (click)="mostrar =!mostrar">Mostrar/Ocultar</button>
+        </div>
+        
+      </div>
+      
+     

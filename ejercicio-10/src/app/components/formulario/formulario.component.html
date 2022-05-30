@@ -1,0 +1,306 @@
+<h1>Cuestionario</h1>
+
+<form (ngSubmit)="guardar()" #forma="ngForm">
+  <fieldset>
+    <legend>Pregunta 1</legend>
+    <p>1. A usted le gusta las peliculas de terror?</p>
+    <div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion"
+          id="seleccion1"
+          value="No mucho"
+          ngModel
+          #Cuestionario="ngModel"
+          [(ngModel)]="seleccion.seleccion1"
+        />
+        <label class="form-check-label" for="seleccion1"> No mucho </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion"
+          id="seleccion2"
+          ngModel
+          value="A veces"
+          #Cuestionario="ngModel"
+          [(ngModel)]="seleccion.seleccion1"
+        />
+        <label class="form-check-label" for="seleccion2"> A veces </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion"
+          id="seleccion3"
+          ngModel
+          value="Siempre"
+          #Cuestionario="ngModel"
+          [(ngModel)]="seleccion.seleccion1"
+        />
+
+        <label class="form-check-label" for="seleccion3"> Siempre </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pregunta 2</legend>
+    <p>2. Que color de boligrafo usa?</p>
+    <div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion1"
+          id="seleccion_1"
+          ngModel
+          value="No mucho"
+          #cuestionario1
+          [(ngModel)]="seleccion1.seleccion_1"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          No mucho
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion1"
+          id="seleccion_1"
+          ngModel
+          value="A veces"
+          #cuestionario1
+          [(ngModel)]="seleccion1.seleccion_1"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          A veces
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion1"
+          id="seleccion_1"
+          ngModel
+          value="Siempre"
+          #cuestionario1
+          [(ngModel)]="seleccion1.seleccion_1"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Siempre
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pregunta 3</legend>
+    <p>3. De que color es el caballo blanco de napoleon?</p>
+    <div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion2"
+          id="flexRadioDefault1"
+          ngModel
+          value="Negro"
+          #cuestionario2
+          [(ngModel)]="seleccion2.seleccion_2"
+        />
+        <label class="form-check-label" for="flexRadioDefault1"> Negro </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion2"
+          id="flexRadioDefault1"
+          ngModel
+          value="Azul"
+          #cuestionario2
+          [(ngModel)]="seleccion2.seleccion_2"
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> Azul </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion2"
+          id="flexRadioDefault1"
+          ngModel
+          value="Cafe"
+          #cuestionario2
+          [(ngModel)]="seleccion2.seleccion_2"
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> Cafe </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion2"
+          id="flexRadioDefault1"
+          ngModel
+          value="Blanco"
+          #cuestionario2
+          [(ngModel)]="seleccion2.seleccion_2"
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> Blanco </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pregunta 4</legend>
+    <p>4.- Que es mas pesado 1k de plumas o un 1k de oro?</p>
+    <div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion3"
+          id="flexRadioDefault1"
+          ngModel
+          value="1 kilo de plumas"
+          #cuestionario2
+          [(ngModel)]="seleccion3.seleccion_3"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          1 kilo de plumas
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion3"
+          id="flexRadioDefault1"
+          ngModel
+          value="1 kilo de oro"
+          #cuestionario2
+          [(ngModel)]="seleccion3.seleccion_3"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          1 kilo de oro
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion3"
+          id="flexRadioDefault1"
+          ngModel
+          value="Ninguno"
+          #cuestionario2
+          [(ngModel)]="seleccion3.seleccion_3"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Ninguno
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seleccion3"
+          id="flexRadioDefault1"
+          ngModel
+          value="Son iguales"
+          #cuestionario2
+          [(ngModel)]="seleccion3.seleccion_3"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Son iguales
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pregunta 5</legend>
+    <p>5.- Cuantos dedos tiene una gallina en su pata?</p>
+    <div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seccion4"
+          id="flexRadioDefault1"
+          ngModel
+          value="3 dedos"
+          #cuestionario3
+          [(ngModel)]="seleccion4.seleccion_4"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          3 dedos
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seccion4"
+          id="flexRadioDefault1"
+          ngModel
+          value="2 dedos"
+          #cuestionario3
+          [(ngModel)]="seleccion4.seleccion_4"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          2 dedos
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="seccion4"
+          id="flexRadioDefault1"
+          ngModel
+          value="4 dedos"
+          #cuestionario3
+          [(ngModel)]="seleccion4.seleccion_4"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          4 dedos
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <div class="">
+    <div class="">
+      <button type="submit" class="btn" [disabled]="!forma.valid">
+        Guardar
+      </button>
+    </div>
+  </div>
+</form>
+
+<div *ngIf="control">
+  <p>1. A usted le gusta las peliculas de terror?</p>
+  <p>{{ seleccion.seleccion1 }}</p>
+
+  <p>2. Que color de boligrafo usa?</p>
+  <p>{{ seleccion1.seleccion_1}}</p>
+  
+  <p>3. De que color es el caballo blanco de napoleon?</p>
+  <p>{{ seleccion2.seleccion_2 }}</p>
+  
+  <p>4.- Que es mas pesado 1k de plumas o un 1k de oro?</p>
+  <p>{{ seleccion3.seleccion_3}}</p>
+
+  <p>5.- Cuantos dedos tiene una gallina en su pata?</p>
+  <p>{{ seleccion4.seleccion_4 }}</p>
+  
+  
+</div>

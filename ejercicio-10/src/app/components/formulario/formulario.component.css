@@ -1,0 +1,11 @@
+.is-invalid {
+    border: 1px solid #ff0000a6;
+  }
+  
+  .text-danger {
+    display: block;
+    margin-left: 5%;
+    padding-top: 2px;
+    color: #ff0000a6;
+  }
+  
